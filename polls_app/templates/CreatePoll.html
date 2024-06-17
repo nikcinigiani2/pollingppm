@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Poll</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<h1>Create a new poll</h1>
+<form id="pollForm" method="POST" action="{% url 'CreatePoll' %}">
+    {% csrf_token %}
+    <input type="text" name="question" placeholder="Question" required>
+    {{ formset.management_form }}
+    <div id="inputArea">
+        <input type="text" name="choices" placeholder="Choice 1" required>
+    </div>
+    <button type="button" id="addChoice">Add another choice</button>
+    <button type="submit">Create</button>
+
+
+    <script>
+    $(document).ready(function(){
+        var choiceCount = 1; // start from 1 because you already have one choice input
+        $('#addChoice').click(function(){
+            $('#inputArea').append('<input type="text" name="choices" placeholder="Choice ' + (choiceCount + 1) + '" required>');
+            choiceCount++;
+            $('#id_choices-TOTAL_FORMS').val(choiceCount);
+        });
+    });
+</script>
+</form>
+
+
+
+</body>
+</html>

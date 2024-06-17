@@ -4,22 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3c539df-5686-4741-806d-2b7484b1e03a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/PollingApp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PollingApp/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PollingApp/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PollingApp/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PollingApp/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PollingApp/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/polls_app/serializer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/polls_app/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/polls_app/templates/login.html" afterDir="false" />
+    <list default="true" id="f3c539df-5686-4741-806d-2b7484b1e03a" name="Changes" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/polls_app/templates/CreatePoll.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/polls_app/templates/Register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PollingApp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PollingApp/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PollingApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PollingApp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls_app/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls_app/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls_app/Apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls_app/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls_app/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls_app/Forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls_app/Models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls_app/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls_app/Serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls_app/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/polls_app/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls_app/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/polls_app/templates/Login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls_app/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls_app/Views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +55,7 @@
     &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -60,6 +63,11 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -110,11 +118,45 @@
       <option name="presentableId" value="Default" />
       <updated>1718285756947</updated>
       <workItem from="1718285763076" duration="6043000" />
-      <workItem from="1718350260811" duration="418000" />
+      <workItem from="1718350260811" duration="1887000" />
+      <workItem from="1718356838284" duration="1673000" />
+      <workItem from="1718365951746" duration="4238000" />
+      <workItem from="1718378484315" duration="2281000" />
+      <workItem from="1718435978543" duration="8188000" />
+      <workItem from="1718462278623" duration="2331000" />
+      <workItem from="1718465268490" duration="319000" />
+      <workItem from="1718544180035" duration="4361000" />
+      <workItem from="1718548564150" duration="32000" />
+      <workItem from="1718605046674" duration="687000" />
+      <workItem from="1718616237212" duration="1804000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1718350937413</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718350937413</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
 </project>

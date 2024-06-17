@@ -1,11 +1,11 @@
 from rest_framework import serializers
-from .models import Poll, Choice
+from .Models import Poll, Choice
 
 
 class ChoiceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Choice
-        fields = ['id', 'choice_text', 'votes']
+        fields = '__all__'
 
 
 class PollSerializer(serializers.ModelSerializer):
@@ -13,7 +13,7 @@ class PollSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Poll
-        fields = ['id', 'question', 'created_at', 'choices']
+        fields = '__all__'
 
 
 
