@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3c539df-5686-4741-806d-2b7484b1e03a" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/polls_app/templates/CreatePoll.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/polls_app/templates/Register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PollingApp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PollingApp/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PollingApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PollingApp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls_app/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls_app/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls_app/Apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls_app/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls_app/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls_app/Forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls_app/Models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls_app/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls_app/Serializer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls_app/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/polls_app/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls_app/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/polls_app/templates/Login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls_app/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls_app/Views.py" afterDir="false" />
-    </list>
+    <list default="true" id="f3c539df-5686-4741-806d-2b7484b1e03a" name="Changes" comment="first commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,7 +110,7 @@
       <workItem from="1718544180035" duration="4361000" />
       <workItem from="1718548564150" duration="32000" />
       <workItem from="1718605046674" duration="687000" />
-      <workItem from="1718616237212" duration="1804000" />
+      <workItem from="1718616237212" duration="2219000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
