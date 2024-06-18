@@ -161,8 +161,7 @@ def vote(request, poll_id):
 def home(request):
     polls = Poll.objects.all()
     choices = Choice.objects.all()
-    return render(request, 'home.html', {'polls': polls, 'choices': choices})
-
+    return render(request, 'home.html', {'polls': polls, 'choices': choices, 'user': request.user})
 
 
 
