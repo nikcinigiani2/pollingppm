@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3c539df-5686-4741-806d-2b7484b1e03a" name="Changes" comment="first commit">
+      <change beforePath="$PROJECT_DIR$/.idea/PollingApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PollingApp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PollingApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PollingApp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls_app/Views.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls_app/Views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls_app/templates/CreatePoll.html" beforeDir="false" afterPath="$PROJECT_DIR$/polls_app/templates/CreatePoll.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls_app/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/polls_app/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +118,11 @@
       <workItem from="1718544180035" duration="4361000" />
       <workItem from="1718548564150" duration="32000" />
       <workItem from="1718605046674" duration="687000" />
-      <workItem from="1718616237212" duration="2919000" />
+      <workItem from="1718616237212" duration="3204000" />
+      <workItem from="1718626532467" duration="3071000" />
+      <workItem from="1718629629192" duration="3026000" />
+      <workItem from="1718697879894" duration="2392000" />
+      <workItem from="1718711374179" duration="5967000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />

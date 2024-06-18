@@ -10,8 +10,8 @@ from .Serializer import PollSerializer, ChoiceSerializer
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.shortcuts import render, redirect
-from .Forms import PollForm, ChoiceFormSet, ChoiceForm
 from django.http import JsonResponse
+from django.contrib.auth import authenticate, login, logout
 
 
 
@@ -130,20 +130,21 @@ def Logout(request):
     return render(request, 'login')
 
 def delete_Poll(request, poll_id):
-    if request.method == 'DELETE':
+    if request.method == 'POST':
         poll = Poll.objects.get(id=poll_id)
-        if request.user == poll.user:
-            poll.delete()
-            return JsonResponse({'success': True})
-        else:
-            return JsonResponse({'success': False, 'error': 'Non autorizzato'}, status=403)
-    else:
-        return JsonResponse({'success': False, 'error': 'Metodo non valido'}, status=405)
+        poll.delete()
+        return JsonResponse({'success': True})
 
 
-def vote(request, poll_id, choice_id):
+
+def vote(request, poll_id):
     poll = Poll.objects.get(id=poll_id)
-    choice = Choice.objects.get(id=choice_id)
+    choice_id = request.POST.get('choice')
+
+    try:
+        choice = Choice.objects.get(id=choice_id)
+    except Choice.DoesNotExist:
+        return JsonResponse({'success': False, 'error': 'Choice does not exist'}, status=404)
 
     if request.user in poll.responded_users.all():
         return JsonResponse({'success': False, 'error': 'User has already voted'})
@@ -154,10 +155,30 @@ def vote(request, poll_id, choice_id):
     poll.responded_users.add(request.user)
     poll.save()
 
-    return JsonResponse({'success': True})
+    return redirect('home')
 
 
 def home(request):
     polls = Poll.objects.all()
     choices = Choice.objects.all()
     return render(request, 'home.html', {'polls': polls, 'choices': choices})
+
+
+
+
+def delete_Poll(request, poll_id):
+    if request.method == 'POST':
+        try:
+            poll = Poll.objects.get(id=poll_id)
+            poll.delete()
+            return redirect('home')
+        except Poll.DoesNotExist:
+            return JsonResponse({'success': False, 'error': 'Poll non trovato'}, status=404)
+    else:
+        return JsonResponse({'success': False, 'error': 'Metodo non valido'}, status=405)
+
+
+
+def Logout(request):
+    logout(request)
+    return redirect('Login')

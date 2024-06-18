@@ -31,10 +31,11 @@ urlpatterns = [
     path('polls/<int:pk>/choices/<int:choice_id>/vote/', Vote.as_view(), name='vote'),
     path('admin/', admin.site.urls),
     path('polls/create/', CreatePoll, name='CreatePoll'),
+    path('vote/<int:poll_id>/', vote, name='vote'),
     path('api-auth/', include('rest_framework.urls')),
     path('register/', Register, name='register'),
     path('logout/', Logout, name='logout'),
-    path('delete_poll/<int:pk>/', delete_Poll, name='delete_Poll'),
+    path('delete_poll/<int:poll_id>/', delete_Poll, name='delete_Poll'),
 
 
 

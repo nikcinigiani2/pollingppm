@@ -3,33 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .poll {
+            flex: 0 1 30%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid #0056b3;
+            background-color: #e6f2ff;
+            border-radius: 5px;
+        }
+        .poll h2 {
+            color: #0056b3;
+        }
+        .poll button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        body {
+            background: linear-gradient(to bottom, #4a90e2, #001f3f);
+            color: #0056b3;
+            font-family: Arial, sans-serif;
+        }
+        .new-poll-button {
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px;
+        }
+        .new-poll-button button {
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .navbar {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #003f7f;
+        }
+        .navbar .user-info {
+            font-size: 18px;
+            color: aliceblue;
+        }
+        .navbar .logout-button {
+            background-color: #ff4b5c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
 </head>
-<body style="background-color: blue;">
+<body>
+    <div class="navbar">
+        <div class="user-info">
+            Logged in as: <span>{{ user.username }}</span>
+        </div>
+        <a href="{% url 'logout' %}" class="logout-button">Logout</a>
+    </div>
 
-    <a href="../polls/create/">
-        <button style="font-size: 20px; padding: 10px 20px;"> New Poll</button>
+    <a href="../polls/create/" class="new-poll-button">
+        <button>New Poll</button>
     </a>
 
-<div>
-    {% for poll in polls %}
-    <div  style="border:2px; background-color: aliceblue; margin-top:10px;margin-bottom:10px">
-        <h2>{{ poll.question }}</h2>
-        <div>
-            <form method="POST" action="">
-            {% csrf_token %}
-            {% for choice in choices %}
-                {% if choice.poll == poll %}
-                    <input type="radio" name="{{ poll.question }}">
-                    <label>{{ choice.text }}</label>
+    <div class="container">
+        {% for poll in polls %}
+        <div class="poll">
+            <h2>{{ poll.question }}</h2>
+            <div>
+                <form method="POST" action="{% url 'vote' poll.id %}">
+                {% csrf_token %}
+                {% for choice in choices %}
+                    {% if choice.poll == poll %}
+                        {% if request.user not in poll.responded_users.all %}
+                        <input type="radio" name="choice" value="{{ choice.id }}" data-id="{{ choice.id }}" style="margin-right: 5px;">
+                        {% endif %}
+                        <label for="{{ choice.id }}">{{ choice.text }}</label> - <span id="votes-{{ choice.id }}" data-id="{{ choice.id }}">{{ choice.votes }}</span> votes<br>
+                    {% endif %}
+                {% endfor %}
+                {% if request.user not in poll.responded_users.all %}
+                    <button type="submit">Vote</button>
                 {% endif %}
-            {% endfor %}
-            <button type="submit">Vote</button>
-            </form>
-            <label for="">Created by {{ poll.user }}</label>
+                </form>
+            {% if poll.user == user %}
+                <form method='POST' action="{% url 'delete_Poll' poll.id %}">
+                {% csrf_token %}
+                    <input type="submit" value="Delete">
+                </form>
+            {% endif %}
+                <label for="" style="margin-top: 10px; display: block; color: #0056b3;">Created by {{ poll.user }}</label>
+            </div>
         </div>
+        {% endfor %}
     </div>
-{% endfor %}
-</div>
 
+    <script>
+
+    </script>
 </body>
 </html>
