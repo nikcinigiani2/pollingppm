@@ -1,6 +1,7 @@
 # PollingApp
 
 PollingApp è un'applicazione web basata su Django che consente agli utenti di creare, condividere e rispondere ai sondaggi.
+Crea anche tu i tuoi sondaggi online: https://pollingppm-production.up.railway.app/
 
 ## Funzionalità
 
