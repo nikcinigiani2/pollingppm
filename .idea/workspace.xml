@@ -25,6 +25,7 @@
         <option value="Python Script" />
         <option value="HTML File" />
         <option value="Dockerfile" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
